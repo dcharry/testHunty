@@ -14,6 +14,7 @@
 ##### etl.py
 *ETL que toma dos tablas desde postgresql de GCP, las transforma y las expone en un dataset de GCP*
 
+##### EL PROYECTO FUE DESARROLLADO 100% EN PYTHON - PYSPARK
 
 ### CONCEPTOS IMPORTANTES - COMANDOS GCP
 
