@@ -9,6 +9,7 @@ from pyspark.sql import SparkSession
 spark = SparkSession \
         .builder \
         .master('yarn') \
+        .config('spark.jars', 'gs://spark-lib/bigquery/spark-bigquery-latest_2.12.jar') \
         .appName("Project1") \
         .getOrCreate()
 
