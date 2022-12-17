@@ -15,7 +15,7 @@
 *ETL que toma dos tablas desde postgresql de GCP, las transforma y las expone en un dataset de GCP*
 
 
-### CONCEPTO IMPORTANTES - COMANDOS GCP
+### CONCEPTOS IMPORTANTES - COMANDOS GCP
 
 #### Como crear una instacia postgresql con su respectivo dataset:
 gcloud sql instances create mypostgre --database-version=POSTGRES_14 --cpu=2 --memory=7680MB --region=us-east1
@@ -42,19 +42,28 @@ gcloud dataproc jobs submit pyspark uploadToPostgresql.py --cluster=hunty-demo -
 ### RESUMEN ARQUITECTURA
 
 ##### uploadToPostgresql.py:
-*1. Se crea instancia en SQL*
-*2. Build sparkSession*
-*3. Se construye script para leer datos desde Google Sheet y escribirlos en postgresql*
-*4. Se crea VM en DATAPROC*
-*5 se construye el Job*
-*6. Ejecución*
+*1. Se crea instancia en SQL.*
+
+*2. Build sparkSession.*
+
+*3. Se construye script para leer datos desde Google Sheet y escribirlos en postgresql.*
+
+*4. Se crea VM en DATAPRO.C*
+
+*5 se construye el Job.*
+
+*6. Ejecución.*
 
 ##### etl.py:
-*1. Build sparkSession*
-*3. Se construye script para leer datos desde postgresql, transformarlos y escribirlos en BQ*
-*4. Se crea VM en DATAPROC*
-*5 se construye el Job*
-*6. Ejecución*
+*1. Build sparkSession.*
+
+*2. Se construye script para leer datos desde postgresql, transformarlos y escribirlos en BQ.*
+
+*3. Se crea VM en DATAPROC.*
+
+*4 se construye el Job.*
+
+*5. Ejecución.*
 
 
 ### RESULTADO FINAL
